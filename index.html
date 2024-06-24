@@ -14,7 +14,25 @@
     <div id="heroText"></div>
     <script>
       function setHeroText(value) {
-        document.getElementById('heroText').textContent = value;
+        let heroElo;
+          if (value < 1000) {
+            heroElo = "Ferro";
+          } else if (value < 2000) {
+            heroElo = "Bronze";
+          } else if (value < 5000) {
+            heroElo = "Prata";
+          } else if (value < 7000) {
+            heroElo = "Ouro";
+          } else if (value < 8000) {
+            heroElo = "Platina";
+          } else if (value < 9000) {
+            heroElo = "Ascendente";
+          } else if (value < 10000) {
+            heroElo = "Imortal";
+          } else {
+            heroElo = "Radiante";
+          }
+        document.getElementById('heroText').textContent = heroElo;
       }
     </script>
   </body>

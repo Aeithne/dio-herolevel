@@ -9,9 +9,11 @@
     <h1>Calculadora de Nível de Herói</h1>
     <h5>por Aeithne</h5>
 
-    <div>EXP: <input type="number" id="expHero" oninput="setHeroText(this.value)"/></div> 
+    <p>Nome: <input type="text" id="heroName" oninput="setHeroText(this.value)"/></p> 
 
-    <div id="heroText"></div>
+    <p>EXP: <input type="number" id="expHero" oninput="setHeroText(this.value)"/></p> 
+
+    <p id="heroText"></p>
     <script>
       function setHeroText(value) {
         let heroElo;
@@ -32,7 +34,7 @@
           } else {
             heroElo = "Radiante";
           }
-        document.getElementById('heroText').textContent = heroElo;
+        document.getElementById('heroText').textContent = "O Herói <b>" + document.getElementById('heroName').value + "</b> está no nível" <b> + heroElo +" </b>";
       }
     </script>
   </body>

@@ -21,7 +21,9 @@
       
       function setHeroText(value) {
         let heroElo;
-          if (value < 1000) {
+          if (value == "" or value < 0)
+            heroElo = "Nenhum";
+          else if (value < 1000) {
             heroElo = "Ferro";
           } else if (value < 2000) {
             heroElo = "Bronze";

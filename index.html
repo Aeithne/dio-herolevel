@@ -9,12 +9,16 @@
     <h1>Calculadora de Nível de Herói</h1>
     <h5>por Aeithne</h5>
 
-    <p>Nome: <input type="text" id="heroName"/></p> 
+    <p>Nome: <input type="text" id="heroName" oninput="setHeroText(this.value)"/></p> 
 
     <p>EXP: <input type="number" id="expHero" oninput="setHeroText(this.value)"/></p> 
 
     <p id="heroText"></p>
     <script>
+      function setHeroName(value) {
+        setHeroText(document.getElementById('expHero').value);
+      }
+      
       function setHeroText(value) {
         let heroElo;
           if (value < 1000) {

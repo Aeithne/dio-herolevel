@@ -21,24 +21,24 @@
       
       function setHeroText(value) {
         let heroElo;
-          if (value == "" || value < 0)
-            heroElo = "Nenhum";
-          else if (value < 1000) {
+          if (value <= 1000) {
             heroElo = "Ferro";
-          } else if (value < 2000) {
+          } else if (value <= 2000) {
             heroElo = "Bronze";
-          } else if (value < 5000) {
+          } else if (value <= 5000) {
             heroElo = "Prata";
-          } else if (value < 7000) {
+          } else if (value <= 7000) {
             heroElo = "Ouro";
-          } else if (value < 8000) {
+          } else if (value <= 8000) {
             heroElo = "Platina";
-          } else if (value < 9000) {
+          } else if (value <= 9000) {
             heroElo = "Ascendente";
-          } else if (value < 10000) {
+          } else if (value <= 10000) {
             heroElo = "Imortal";
-          } else {
+          } else if (value > 10000) {
             heroElo = "Radiante";
+          } else {
+            heroElo = "Nenhum";
           }
         document.getElementById('heroText').innerHTML = "O Herói <b>" + document.getElementById('heroName').value + "</b> está no nível <b>" + heroElo + "</b>";
       }
